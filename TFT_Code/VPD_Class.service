@@ -1,0 +1,11 @@
+[Unit]
+Description=This service controls the timing when the VM of a group are turn on and off
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/VPD_Class
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
